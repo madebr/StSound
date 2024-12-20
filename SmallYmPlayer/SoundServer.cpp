@@ -27,6 +27,9 @@
 // Internal WaveOut API callback function. We just call our sound handler ("playNextBuffer")
 static	void CALLBACK waveOutProc(HWAVEOUT hwo,UINT uMsg,DWORD_PTR dwInstance,DWORD_PTR dwParam1,DWORD_PTR dwParam2)
 {
+	(void) hwo;
+	(void) dwParam1;
+	(void) dwParam2;
 
 	if (WOM_DONE == uMsg)
 	{
