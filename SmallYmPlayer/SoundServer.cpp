@@ -20,8 +20,9 @@
 #include <windows.h>
 #include "SoundServer.h"
 
-
+#ifdef _MSC_VER
 #pragma	comment(lib,"winmm.lib")
+#endif
 
 // Internal WaveOut API callback function. We just call our sound handler ("playNextBuffer")
 static	void CALLBACK waveOutProc(HWAVEOUT hwo,UINT uMsg,DWORD_PTR dwInstance,DWORD_PTR dwParam1,DWORD_PTR dwParam2)
